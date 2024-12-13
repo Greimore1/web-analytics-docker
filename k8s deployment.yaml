@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-analytics-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-analytics
+  template:
+    metadata:
+      labels:
+        app: web-analytics
+    spec:
+      containers:
+      - name: web-analytics
+        image: your-dockerhub-username/web-analytics:v1
+        ports:
+        - containerPort: 5000
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-analytics-service
+spec:
+  selector:
+    app: web-analytics
+  ports:
+  - port: 5000
+    targetPort: 5000
+    name: app-port
+  - port: 8000
+    targetPort: 8000
+    name: metrics-port
