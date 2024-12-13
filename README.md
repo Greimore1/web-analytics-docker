@@ -1,7 +1,7 @@
 # Web Analytics Microservice
 
 ## Overview
-A simple, containerized web analytics microservice that tracks request metrics using Flask and Prometheus. This project demonstrates:
+A simple, containerised web analytics microservice that tracks request metrics using Flask and Prometheus. This project demonstrates:
 - Containerization with Docker
 - Microservice architecture
 - Prometheus metrics collection
