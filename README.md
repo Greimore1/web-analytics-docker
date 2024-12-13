@@ -15,7 +15,7 @@ A simple, containerized web analytics microservice that tracks request metrics u
 
 ## Prerequisites
 - Docker
-- Kubernetes (optional)
+- Kubernetes
 - Python 3.9+
 
 ## Local Development
